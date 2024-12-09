@@ -1,0 +1,15 @@
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: proyectodb
+      MYSQL_USER: pablo
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - project-data:/var/lib/mysql
+volumes:
+  project-data:
