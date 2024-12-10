@@ -8,6 +8,6 @@ import lombok.*;
 public class Student extends User{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long studentId;
+    private Long id;
     private String collegeYear;
 }
