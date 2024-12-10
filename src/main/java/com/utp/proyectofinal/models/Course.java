@@ -1,10 +1,10 @@
 package com.utp.proyectofinal.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor
@@ -13,4 +13,10 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @ManyToMany()
+    @JoinTable(
+            name = "course_teacher", joinColumns = @JoinColumn(name = "course_id"),
+                    inverseJoinColumns = @JoinColumn(name = "teacher_id")
+    )
+    private Set<Teacher> teachers = new HashSet<>();
 }

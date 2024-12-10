@@ -14,22 +14,22 @@
 </div>
 
 <div class="container">
-    <form>
+    <form th:action="@{/student/register}" method="post">
         <div class="mb-3">
             <label for="firstname" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="firstname" aria-describedby="firstname">
+            <input type="text" class="form-control" id="firstname" required aria-describedby="firstname">
         </div>
         <div class="mb-3">
             <label for="lastname" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="lastname" aria-describedby="lastname">
+            <input type="text" class="form-control" id="lastname" required aria-describedby="lastname">
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" aria-describedby="email">
+            <input type="email" class="form-control" id="email" required aria-describedby="email">
         </div>
         <div class="mb-3">
             <label for="collegeYear" class="form-label">Grado en Curso</label>
-            <input type="text" class="form-control" id="collegeYear" aria-describedby="collegeYear">
+            <input type="text" class="form-control" id="collegeYear" required aria-describedby="collegeYear">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

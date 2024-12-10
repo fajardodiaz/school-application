@@ -11,5 +11,10 @@ services:
       - "3306:3306"
     volumes:
       - project-data:/var/lib/mysql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 9000:8080
 volumes:
   project-data:

@@ -3,7 +3,6 @@ package com.utp.proyectofinal.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
-import jakarta.persistence.UniqueConstraint;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
