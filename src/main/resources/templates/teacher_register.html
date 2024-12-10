@@ -14,26 +14,26 @@
 </div>
 
 <div class="container">
-    <form>
+    <form th:action="@{/teachers/register}" th:object="${teacher}" th:method="post">
         <div class="mb-3">
-            <label for="firstname" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="firstname" aria-describedby="firstname">
+            <label class="form-label" for="firstName">Nombre</label>
+            <input type="text" th:field="*{firstName}" class="form-control" required  aria-describedby="firstName" id="firstName">
         </div>
         <div class="mb-3">
             <label for="lastname" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="lastname" aria-describedby="lastname">
+            <input type="text" th:field="*{lastName}" class="form-control" id="lastname" required aria-describedby="lastname">
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" aria-describedby="email">
+            <input type="email" class="form-control" th:field="*{email}" id="email" required aria-describedby="email">
         </div>
         <div class="mb-3">
             <label for="specialty" class="form-label">Especialidad</label>
-            <input type="text" class="form-control" id="specialty" aria-describedby="specialty">
+            <input type="text" class="form-control" th:field="*{specialty}" id="specialty" required aria-describedby="specialty">
         </div>
         <div class="mb-3">
-            <label for="degree" class="form-label">Carrera</label>
-            <input type="text" class="form-control" id="degree" aria-describedby="degree">
+            <label for="degree" class="form-label">Grado Academico:</label>
+            <input type="text" class="form-control" th:field="*{degree}" id="degree" required aria-describedby="degree">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

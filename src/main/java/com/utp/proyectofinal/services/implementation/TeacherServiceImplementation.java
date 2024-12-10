@@ -5,7 +5,12 @@ import com.utp.proyectofinal.models.Teacher;
 import com.utp.proyectofinal.repository.TeacherRepository;
 import com.utp.proyectofinal.services.ITeacherService;
 import mapper.TeacherMapper;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
+
+@Service
+@AllArgsConstructor
 public class TeacherServiceImplementation implements ITeacherService {
     private TeacherRepository teacherRepository;
 
