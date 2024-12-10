@@ -14,22 +14,22 @@
 </div>
 
 <div class="container">
-    <form th:action="@{/student/register}" method="post">
+    <form th:action="@{/students/register}" th:object="${student}" th:method="post">
         <div class="mb-3">
-            <label for="firstname" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="firstname" required aria-describedby="firstname">
+            <label class="form-label" for="firstName">Nombre</label>
+            <input type="text" th:field="*{firstName}" class="form-control" required  aria-describedby="firstName" id="firstName">
         </div>
         <div class="mb-3">
             <label for="lastname" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="lastname" required aria-describedby="lastname">
+            <input type="text" th:field="*{lastName}" class="form-control" id="lastname" required aria-describedby="lastname">
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" required aria-describedby="email">
+            <input type="email" class="form-control" th:field="*{email}" id="email" required aria-describedby="email">
         </div>
         <div class="mb-3">
             <label for="collegeYear" class="form-label">Grado en Curso</label>
-            <input type="text" class="form-control" id="collegeYear" required aria-describedby="collegeYear">
+            <input type="text" class="form-control" th:field="*{collegeYear}" id="collegeYear" required aria-describedby="collegeYear">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
