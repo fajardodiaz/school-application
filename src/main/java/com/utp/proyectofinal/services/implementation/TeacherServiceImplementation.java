@@ -19,4 +19,9 @@ public class TeacherServiceImplementation implements ITeacherService {
         Teacher teacher = TeacherMapper.mapToTeacher(teacherDto, new Teacher());
         Teacher savedTeacher = teacherRepository.save(teacher);
     }
+
+    // @Override
+    // public List<Teacher> fetchAll(){
+        
+    // }
 }
